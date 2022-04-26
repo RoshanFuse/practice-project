@@ -1,0 +1,55 @@
+ to create token command it valid for 5 min
+ http POST http://127.0.0.1:8000/gettoken/ username='user1' password='Roshan98'
+
+ to verify token
+ http POST http://127.0.0.1:8000/verifytoken/ token='token urls access'
+
+
+ to generate token by refresh token its valid for 1 day
+ http POST http://127.0.0.1:8000/refreshtoken/ refresh='token urls refresh'
+
+
+ to acces api
+ http http://127.0.0.1:8000/studentapi/              
+ output is not Authentication credentials were not provided
+
+ so to access data 
+ http http://127.0.0.1:8000/studentapi/ 'Authorization:Bearer access_token_ulr'
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+ to add data by terminal post
+ http -f POST http://127.0.0.1:8000/studentapi/ name=ram email=roshanfuser98@gmail.com password=Sachin12 'Authorization:Bearer access_token_ulr'
+
+ put data
+ http PUT http://127.0.0.1:8000/studentapi/id/ name=sham email=roshanfuser98@reddifmailmail.com password=Sachin12hfug 'Authorization:Bearer access_token_ulr'
+
+ delete data
+ http DELETE http://127.0.0.1:8000/studentapi/id/ 'Authorization:Bearer access_token_ulr'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

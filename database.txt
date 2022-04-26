@@ -1,0 +1,21 @@
+mongoDB
+1) download the mongo db 
+2) pip install mongoengine
+3) pip install pymongo==3.12.3 ............ to connect with mongodb
+4) pip install djongo
+5)in mongodb connect to localhost and create database
+6)create django projetc and change database in sr=ettings.py file
+7) makemigration and migrate it 
+8)database created succesfully
+
+
+
+
+mysql
+1) download mysql
+2) create databse 
+3) pip install mysqlclient                      
+   to connect with mysql database
+4) change the database in project settings.py file
+5) makemigration and migrate it 
+6) database created succesfully
