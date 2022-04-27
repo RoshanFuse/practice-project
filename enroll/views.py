@@ -6,6 +6,7 @@ from django.shortcuts import render
 from enroll.forms import StudentRegistartion
 from enroll.models import User
 
+
 # Create your views here.
 #this function is for adding new item an show item
 def add_show(request):
@@ -17,13 +18,16 @@ def add_show(request):
         pw=fm.cleaned_data['password']
         reg=User(name=nm,email=em,password=pw)
         reg.save()
-        fm = StudentRegistartion()     
+        fm = StudentRegistartion() 
+            
     # we can use this method also fm.save()
     else:    
      fm = StudentRegistartion()
     stud = User.objects.all()
+    # for signal printing at frontend
+    ro = request.session.get('ip', 0)
     # stud ko else ke baher lagana chahiye
-    return render(request,'enroll/addshow.html',{'form':fm,'stu':stud})
+    return render(request,'enroll/addshow.html',{'form':fm,'stu':stud,'ros':ro})
 
 #update
 def update(request,id):
