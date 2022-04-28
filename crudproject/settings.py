@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,7 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'enroll.middleware.MyMiddleware',
+    'enroll.middleware.middleware.MyMiddleware',
 ]
 
 ROOT_URLCONF = 'crudproject.urls'
@@ -70,7 +71,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'crudproject.wsgi.application'
+# WSGI_APPLICATION = 'crudproject.wsgi.application'
+ASGI_APPLICATION = 'crudproject.asgi.application'
 
 
 # Database

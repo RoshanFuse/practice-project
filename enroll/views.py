@@ -1,4 +1,5 @@
 import email
+from email.policy import default
 from pyexpat.errors import messages
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -54,3 +55,6 @@ def delete(request,id):
         pi=User.objects.get(pk=id)
         pi.delete()
         return HttpResponseRedirect('/')
+    
+    
+    

@@ -7,4 +7,4 @@ class EnrollConfig(AppConfig):
 
 # signals setting
     def ready(self):
-       import enroll.signals
+       import enroll.signals.signals
