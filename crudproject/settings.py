@@ -155,3 +155,10 @@ SIMPLE_JWT = {
     
     'ROTATE_REFRESH_TOKENS':True
 }
+
+# this is for celery 
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SELERLIZER = 'json'

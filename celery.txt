@@ -1,0 +1,19 @@
+create celery.py in project folder
+
+init.pyin project
+
+setting  in project
+
+task.py in app
+
+
+
+command to runserver of celery for local server
+celery -A curdproject worker -l info
+
+
+
+https://studygyaan.com/django/multitasking-in-django-celery
+
+
+

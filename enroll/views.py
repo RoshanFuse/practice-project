@@ -7,6 +7,8 @@ from django.shortcuts import render
 from enroll.forms import StudentRegistartion
 from enroll.models import User
 
+from .celery.task import sleepy
+
 
 # Create your views here.
 #this function is for adding new item an show item
@@ -24,10 +26,13 @@ def add_show(request):
     # we can use this method also fm.save()
     else:    
      fm = StudentRegistartion()
+    # stud ko else ke baher lagana chahiye
     stud = User.objects.all()
     # for signal printing at frontend
     ro = request.session.get('ip', 0)
-    # stud ko else ke baher lagana chahiye
+    # for celery
+    sleepy.delay(5)
+    # sleepy(10)
     return render(request,'enroll/addshow.html',{'form':fm,'stu':stud,'ros':ro})
 
 #update
